@@ -31,7 +31,7 @@ files = []
 each_dir(input_dir) do |item|
   blob_sha = github.create_blob(repo, Base64.encode64(File.open(item, "r").readlines.join), "base64")
   files << ({
-    :path => File.join(output_dir, item.split("/")[1..-1].join("/")),
+    :path => item.gsub(input_dir, output_dir),
     :mode => "100644",
     :type => "blob",
     :sha => blob_sha
