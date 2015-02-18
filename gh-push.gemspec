@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "bin/gh-push",
+    "gh-push.gemspec",
     "lib/gh-push.rb",
     "spec/gh-push_spec.rb",
     "spec/spec_helper.rb"
